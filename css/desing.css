@@ -16,8 +16,62 @@ header h1{
     display: none;
 }
 
-header nav{
-    display: none;
+header nav .ioMenuMovil{
+    height: 25px;
+    width: 120px;
+    cursor: pointer;
+    line-height: 40px;
+    margin: 0px 0px 0px 10px;
+    padding-top: 5px;
+}
+header nav .ioMenuMovil img{
+    width: 100%;
+
+
+}
+
+header nav #cardMenu{
+    position: relative;
+    width: 230px;
+    background: white;
+    top: -30px;
+    left: 0px;
+    border-right: 3px solid #AFAEAE;
+    z-index: 999px;
+    padding-bottom: 50px;
+    
+}
+
+header nav #cardMenu #logoMenu{ 
+    
+    height: 200px;
+    width: 80%;
+
+    margin: 90px 0px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+
+}
+
+header nav #cardMenu #logoMenu img{ 
+    width: 100%;
+}
+
+header nav #cardMenu ul{
+   
+    margin-top: -20px;
+} 
+
+
+header nav #cardMenu ul li{
+    list-style: none;
+    font-size: 1.5em;
+    line-height: 37px;
+}
+
+header nav #cardMenu ul li a{
+    text-decoration: none;
+    color: black;
 }
 
 header #prev_section,
@@ -72,6 +126,86 @@ header #next_section img{
     header {
         height: 50px;
     }
+
+    header h1{
+        display: inline-block;
+        width: 20%;
+        
+        margin: 0px;
+        height: 50px;
+        margin-left: 80px;
+        line-height: 50px;
+        min-width: 200px;
+    }
+
+    header h1 > * {
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        color: white;
+        font-size: 0.8em;
+        margin: 0px 3px;
+    }
+
+    header h1 figure {
+        height: 40px;
+        width: 40px;
+        margin: 0px;
+    }
+
+    header h1 figure img {
+        width: 100%;
+    }
+
+    header nav {
+        display: inline-block;
+        vertical-align: middle;
+        width: 62%;
+        position: relative;
+        
+    }
+
+    header nav #showMenu,
+    header nav #hideMenu{
+        display: none;
+
+    }
+
+    header nav #cardMenu{
+        display: inline-block;
+        border: none;
+        background: none;
+        position: relative;
+        top: 0px;
+        width: 100%;
+      
+        text-align: right;
+        padding-bottom: 0px;
+    }
+
+    header nav #cardMenu figure{
+        display: none;
+    }
+
+    header nav #cardMenu ul{
+        margin-top: -15px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    header nav #cardMenu ul li{
+        display: inline-block;
+        width: 75px;
+        
+        text-align: center;
+        font-size: 1.2em;
+        margin:0px -2px;
+    }
+
+    header nav #cardMenu ul li a {
+        color: white;
+    }
+
     header #prev_section ,
     header #next_section {
         position: absolute;
@@ -81,6 +215,7 @@ header #next_section img{
         right: 40px;
         z-index: 999;
         border-radius: 50%;
+        overflow: hidden;
     }
     header #prev_section {
         top:115px;
