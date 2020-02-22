@@ -132,17 +132,17 @@ header #next_section img{
     background: purple;
 }
 
-#slider #Skills{
+#slider #skills{
     height: 300px;
     background: blue;
 }
 
-#slider #Portafolio{
+#slider #portafolio{
     height: 200px;
     background: grey;
 }
 
-#slider #Blog{
+#slider #blog{
     height: 100px;
     background: yellow;
 }

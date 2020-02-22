@@ -107,68 +107,63 @@
 			}
 		}
 
-		function setColors(i){
-			var bkgr_body;
-			var bkgr_menu;
-			var search;
-			
-				if(sections[i] == "home"){
-					bkgr_body = "#233D58";
-					bkgr_menu = "#233D58";
-				}
-				else{
-					bkgr_body = "#f1f1f1";
-					bkgr_menu = "#29abe2";
-				}
-				search = document.getElementById(sections[i]);
-				search.style.background = bkgr_body;
-				var menu = document.getElementsByTagName("header")[0];
-				menu.style.background = bkgr_menu;
-			
-		}
+		
+        function setColor(i) {
+            var search;
+            var bkgr_body;
+            var bkgr_menu;
 
-		function navSection(nav){
-			var search;
-			var show;
-			var bkgr_body;
-			var bkgr_menu;
+            if (sections[i] == "home") {
+                bkgr_body = "#AED6F1";
+                bkgr_menu = "#AED6F1";
+            } else {
+                bkgr_body = "#F1F1F1";
+                bkgr_menu = "#AED6F1";
+            }
+            search = document.getElementById(sections[i]);
+            search.style.background = bkgr_body;
+            var menu = document.getElementsByTagName("header")[0];
+            menu.style.background = bkgr_menu;
+        }
 
-			for (var i = 0; i<5; i++) {
-				search = document.getElementById(sections[i]);
-				search.style.display = "none";
-				if(sections[i] == nav){
-					search.style.display = "block";
-					setColors(i);
-				}
-				
-			}
-		}
+        function navSection(nav) {
+            var search;
+            var show;
 
-		function displaySection(nav){
+            for (var i = 0; i < sections.length; i++) {
+                search = document.getElementById(sections[i]);
+                search.style.display = "none";
 
-			var search;
-			var show;
-			for(var i = 0 ; i<5; i++){
-				search = document.getElementById(sections[i]);
-				show = search.style.display;
-				if(show == 'block'){
-					search.style.display = 'none';
-					if(nav == "next"){
-						i++;
-						if(i>4) i = 0;
-					}
-					if(nav == "prev"){
-						i--;
-						if(i<0) i = 4;
-					}
-					search = document.getElementById(sections[i]);
-					search.style.display = "block";
-					break;
-				}
+                if (sections[i] == nav) {
+                    search.style.display = "block";
+                    setColor(i);
+                }
+            }
+        }
 
-			}
-			setColors(i);
-		}
+        function displaySection(nav) {
+            var search;
+            var show;
+            for (var i = 0; i < sections.length; i++) {
+                search = document.getElementById(sections[i]);
+                show = search.style.display;
+
+                if (show == "block") {
+                    search.style.display = "none";
+                    if (nav == "next") {
+                        i++;
+                        if (i > 4) i = 0;
+                    } else {
+                        i--;
+                        if (i < 0) i = 4;
+                    }
+                    search = document.getElementById(sections[i]);
+                    search.style.display = "block";
+                    break;
+                }
+            }
+            setColor(i);
+        }
 
 		
 
