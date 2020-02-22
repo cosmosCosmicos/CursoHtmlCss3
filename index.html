@@ -12,11 +12,11 @@
 <body>
 	<header>
 		<h1>
-			<a href="index.html">
+			<a href="index.html"></a>
 				<figure>
 					<img src="img/Icon.png" alt="">
 				</figure>
-			</a>
+			
 			<a href="index.html">Mario Guiloff</a>
 		
 		</h1>
@@ -37,9 +37,9 @@
 				<ul>
 					<li><a onClick="navSection('home')" href="">Home</a></li>
 					<li><a onClick="navSection('aboutme')" href="">Sobre Mi</a></li>
-					<li><a onClick="navSection('Skills')" href="">Skills</a></li>
-					<li><a onClick="navSection('Portafolio')" href="">Portafolio</a></li>
-					<li><a onClick="navSection('Blog')" href="">Blog</a></li>
+					<li><a onClick="navSection('skills')" href="">Skills</a></li>
+					<li><a onClick="navSection('portafolio')" href="">Portafolio</a></li>
+					<li><a onClick="navSection('blog')" href="">Blog</a></li>
 					<li><a href="">Contacto</a></li>
 				</ul>
 			</div>
@@ -127,6 +127,22 @@
 			
 		}
 
+		function navSection(nav){
+			var search;
+			var show;
+			var bkgr_body;
+			var bkgr_menu;
+
+			for (var i = 0; i<5; i++) {
+				search = document.getElementById(sections[i]);
+				search.style.display = "none";
+				if(sections[i] == nav){
+					search.style.display = "block";
+					setColors(i);
+				}
+				
+			}
+		}
 
 		function displaySection(nav){
 
@@ -155,27 +171,7 @@
 		}
 
 		
-		function navSection(nav){
 
-
-			var search;
-			var show;
-			var bkgr_body;
-			var bkgr_menu;
-
-			for (var i = 0; i<5; i++) {
-				search = document.getElementById(sections[i]);
-				search.style.display = "none";
-				if(sections[i] == nav){
-					search.style.display = "block";
-					setColors(i);
-				}
-				
-			}
-
-
-
-		}
 	</script>
 </body>
 </html>
